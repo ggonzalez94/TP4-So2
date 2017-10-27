@@ -35,7 +35,14 @@
 static QueueHandle_t log_queue = NULL;
 static TaskHandle_t  task_async = NULL;
 static  SemaphoreHandle_t xSemaphore = NULL;
-static int contador = 0;
+typedef enum {
+	emisor_fijo,
+	emisor_variable
+}emisor_mensaje ;
+typedef struct mensaje{
+	emisor_mensaje emisor;
+	void *Data;
+};
 
 /*******************************************************************************
  * Prototypes
@@ -79,7 +86,7 @@ int main(void) {
   if (xSemaphore != NULL){
 	  init_sw2();
 	  /* Create RTOS task */
-	  log_init(10, sizeof(char *));
+	  log_init(10, sizeof(struct mensaje));
 	  //vTraceEnable(TRC_START);
 	  xTaskCreate(write_fijo, "TAREA_PERIODICA", configMINIMAL_STACK_SIZE + 166, NULL, tskIDLE_PRIORITY + 2, NULL);
 	  xTaskCreate(write_variable, "TAREA_APERIODICA", configMINIMAL_STACK_SIZE + 166, NULL, tskIDLE_PRIORITY + 3, NULL);
@@ -95,23 +102,26 @@ int main(void) {
 
 static void write_fijo(void *pvParameters)
 {
-
+	int temperatura = 25;
+	struct mensaje mensaje_fijo;
+	mensaje_fijo.emisor = emisor_fijo;
+	mensaje_fijo.Data = (void *) &temperatura;
 	TickType_t xTimeInTicks = pdMS_TO_TICKS( 500 );
-	uint32_t i = 0;
 	for (;;)
 	{
 
-		char * log =  pvPortMalloc( sizeof(char *) * strlen("[PERIODIC TASK]"));
-		sprintf(log, "[PERIODIC TASK]");
-		xQueueSend(log_queue, &log, 0);
+		//char * log =  pvPortMalloc( sizeof(char *) * strlen("[PERIODIC TASK]"));
+		//sprintf(log, "[PERIODIC TASK]");
+		xQueueSend(log_queue, &mensaje_fijo, 0);
 		LED_RED_TOGGLE();
 		vTaskDelay(xTimeInTicks);
 
 	}
-	//vTaskSuspend(NULL);
 }
 
 static void write_variable(void *pvParameters){
+	struct mensaje mensaje_variable;
+	mensaje_variable.emisor = emisor_variable;
 	uint32_t counter = 1;
 	 for( ;; )
 	 {
@@ -122,8 +132,10 @@ static void write_variable(void *pvParameters){
 		 for (int i = 0; i< counter-1; i++){
 			 strcat(log,"*");
 		 }
-		 xQueueSend(log_queue, &log, 0);
+		 mensaje_variable.Data = (void *) log;
+		 xQueueSend(log_queue, &mensaje_variable, 0);
 		 LED_BLUE_TOGGLE();
+		 vPortFree(log);
 		 counter++;
 	 }
 
@@ -139,14 +151,25 @@ void log_init(uint32_t queue_length, uint32_t max_log_lenght)
 static void log_task(void *pvParameters)
 {
 	uint32_t counter = 0;
-	//	char log[MAX_LOG_LENGTH + 1];
-	char * log;
+	char * log_variable;
+	int *log_fijo;
+	struct mensaje mensaje_recibido;
 	while (1)
 	{
-		xQueueReceive(log_queue, &log, portMAX_DELAY);
-		//vPrintString(log);
-		PRINTF("Log %d: %s\r\n", counter, log);
-		vPortFree(log);
+		xQueueReceive(log_queue, &mensaje_recibido, portMAX_DELAY);
+		//Identifico la fuente e imprimo
+		switch(mensaje_recibido.emisor){
+			case emisor_fijo:
+				log_fijo = (int *) mensaje_recibido.Data;
+				PRINTF("Log %d: %d\r\n", counter, *log_fijo);
+				break;
+			case emisor_variable:
+				log_variable = (char *) mensaje_recibido.Data;
+				PRINTF("Log %d: %s\r\n", counter, log_variable);
+				break;
+			default:
+				PRINTF("Log %d: %s\r\n", counter, "Emisor no identificado");
+		}
 		counter++;
 	}
 }
