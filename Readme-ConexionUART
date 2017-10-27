@@ -1,0 +1,3 @@
+Conectarse por UART:
+- Listar dispositivos: ls /dev/tty.* (el nombre es el que sale en la segunda columna)
+- Conectarse: screen NoMBRE 115200
