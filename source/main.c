@@ -161,7 +161,7 @@ static void log_task(void *pvParameters)
 		switch(mensaje_recibido.emisor){
 			case emisor_fijo:
 				log_fijo = (int *) mensaje_recibido.Data;
-				PRINTF("Log %d: %d\r\n", counter, *log_fijo);
+				PRINTF("Log %d: %d grados\r\n", counter, *log_fijo);
 				break;
 			case emisor_variable:
 				log_variable = (char *) mensaje_recibido.Data;

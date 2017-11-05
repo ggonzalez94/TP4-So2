@@ -7906,7 +7906,7 @@ LOAD /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.
  .FlashConfig   0x0000000000000400       0x10 ./startup/startup_MK64F12.o
                 0x0000000000000410                . = ALIGN (0x4)
 
-.text           0x0000000000000410     0x7530
+.text           0x0000000000000410     0x7534
                 0x0000000000000410                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000000000410       0x54 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
@@ -8593,153 +8593,153 @@ LOAD /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.
  .text._exit    0x00000000000068b0        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
                 0x00000000000068b0                _exit
  *(.rodata)
- .rodata        0x00000000000068b4       0x70 ./source/main.o
- .rodata        0x0000000000006924       0x18 ./freertos/SEGGER_RTT.o
- .rodata        0x000000000000693c        0x8 ./freertos/tasks.o
- .rodata        0x0000000000006944       0x10 ./freertos/timers.o
- .rodata        0x0000000000006954      0x274 ./freertos/trcStreamingRecorder.o
- .rodata        0x0000000000006bc8       0x48 ./drivers/fsl_clock.o
- .rodata        0x0000000000006c10       0x40 ./drivers/fsl_common.o
- .rodata        0x0000000000006c50       0xac ./drivers/fsl_dspi.o
- .rodata        0x0000000000006cfc      0x244 ./drivers/fsl_edma.o
- .rodata        0x0000000000006f40      0x2fc ./drivers/fsl_flexcan.o
- .rodata        0x000000000000723c       0x44 ./drivers/fsl_gpio.o
- .rodata        0x0000000000007280       0x6c ./drivers/fsl_sai.o
- .rodata        0x00000000000072ec      0x328 ./drivers/fsl_sdhc.o
- .rodata        0x0000000000007614      0x12c ./drivers/fsl_uart.o
+ .rodata        0x00000000000068b4       0x74 ./source/main.o
+ .rodata        0x0000000000006928       0x18 ./freertos/SEGGER_RTT.o
+ .rodata        0x0000000000006940        0x8 ./freertos/tasks.o
+ .rodata        0x0000000000006948       0x10 ./freertos/timers.o
+ .rodata        0x0000000000006958      0x274 ./freertos/trcStreamingRecorder.o
+ .rodata        0x0000000000006bcc       0x48 ./drivers/fsl_clock.o
+ .rodata        0x0000000000006c14       0x40 ./drivers/fsl_common.o
+ .rodata        0x0000000000006c54       0xac ./drivers/fsl_dspi.o
+ .rodata        0x0000000000006d00      0x244 ./drivers/fsl_edma.o
+ .rodata        0x0000000000006f44      0x2fc ./drivers/fsl_flexcan.o
+ .rodata        0x0000000000007240       0x44 ./drivers/fsl_gpio.o
+ .rodata        0x0000000000007284       0x6c ./drivers/fsl_sai.o
+ .rodata        0x00000000000072f0      0x328 ./drivers/fsl_sdhc.o
+ .rodata        0x0000000000007618      0x12c ./drivers/fsl_uart.o
  *(.rodata*)
  .rodata.__func__.6782
-                0x0000000000007740       0x18 ./drivers/fsl_clock.o
+                0x0000000000007744       0x18 ./drivers/fsl_clock.o
  .rodata.fllFactorTable.6903
-                0x0000000000007758       0x10 ./drivers/fsl_clock.o
+                0x000000000000775c       0x10 ./drivers/fsl_clock.o
  .rodata.__func__.6918
-                0x0000000000007768       0x14 ./drivers/fsl_clock.o
+                0x000000000000776c       0x14 ./drivers/fsl_clock.o
  .rodata.__func__.6963
-                0x000000000000777c       0x14 ./drivers/fsl_clock.o
+                0x0000000000007780       0x14 ./drivers/fsl_clock.o
  .rodata.__func__.7105
-                0x0000000000007790       0x14 ./drivers/fsl_clock.o
+                0x0000000000007794       0x14 ./drivers/fsl_clock.o
  .rodata.__func__.7172
-                0x00000000000077a4       0x14 ./drivers/fsl_clock.o
+                0x00000000000077a8       0x14 ./drivers/fsl_clock.o
  .rodata.__func__.7443
-                0x00000000000077b8       0x18 ./drivers/fsl_dspi.o
+                0x00000000000077bc       0x18 ./drivers/fsl_dspi.o
  .rodata.__func__.7447
-                0x00000000000077d0       0x18 ./drivers/fsl_dspi.o
+                0x00000000000077d4       0x18 ./drivers/fsl_dspi.o
  .rodata.__func__.7451
-                0x00000000000077e8       0x18 ./drivers/fsl_dspi.o
+                0x00000000000077ec       0x18 ./drivers/fsl_dspi.o
  .rodata.__func__.7255
-                0x0000000000007800       0x10 ./drivers/fsl_edma.o
+                0x0000000000007804       0x10 ./drivers/fsl_edma.o
  .rodata.__func__.7322
-                0x0000000000007810       0x18 ./drivers/fsl_flexcan.o
+                0x0000000000007814       0x18 ./drivers/fsl_flexcan.o
  .rodata.__func__.6801
-                0x0000000000007828       0x10 ./drivers/fsl_gpio.o
+                0x000000000000782c       0x10 ./drivers/fsl_gpio.o
  .rodata.__func__.7307
-                0x0000000000007838       0x1c ./drivers/fsl_sai.o
+                0x000000000000783c       0x1c ./drivers/fsl_sai.o
  .rodata.__func__.7311
-                0x0000000000007854       0x1c ./drivers/fsl_sai.o
+                0x0000000000007858       0x1c ./drivers/fsl_sai.o
  .rodata.__func__.7490
-                0x0000000000007870       0x18 ./drivers/fsl_sdhc.o
+                0x0000000000007874       0x18 ./drivers/fsl_sdhc.o
  .rodata.s_uartBases
-                0x0000000000007888       0x18 ./drivers/fsl_uart.o
+                0x000000000000788c       0x18 ./drivers/fsl_uart.o
  .rodata.s_uartClock
-                0x00000000000078a0       0x18 ./drivers/fsl_uart.o
+                0x00000000000078a4       0x18 ./drivers/fsl_uart.o
  .rodata.__func__.6976
-                0x00000000000078b8       0x14 ./drivers/fsl_uart.o
+                0x00000000000078bc       0x14 ./drivers/fsl_uart.o
  .rodata.__func__.6992
-                0x00000000000078cc        0xc ./drivers/fsl_uart.o
+                0x00000000000078d0        0xc ./drivers/fsl_uart.o
  .rodata.__func__.7010
-                0x00000000000078d8       0x18 ./drivers/fsl_uart.o
+                0x00000000000078dc       0x18 ./drivers/fsl_uart.o
  .rodata.__func__.7070
-                0x00000000000078f0       0x14 ./drivers/fsl_uart.o
+                0x00000000000078f4       0x14 ./drivers/fsl_uart.o
  .rodata.mcgConfig_BOARD_BootClockRUN
-                0x0000000000007904        0xc ./board/clock_config.o
-                0x0000000000007904                mcgConfig_BOARD_BootClockRUN
+                0x0000000000007908        0xc ./board/clock_config.o
+                0x0000000000007908                mcgConfig_BOARD_BootClockRUN
  .rodata.simConfig_BOARD_BootClockRUN
-                0x0000000000007910        0x8 ./board/clock_config.o
-                0x0000000000007910                simConfig_BOARD_BootClockRUN
+                0x0000000000007914        0x8 ./board/clock_config.o
+                0x0000000000007914                simConfig_BOARD_BootClockRUN
  .rodata.oscConfig_BOARD_BootClockRUN
-                0x0000000000007918        0x8 ./board/clock_config.o
-                0x0000000000007918                oscConfig_BOARD_BootClockRUN
+                0x000000000000791c        0x8 ./board/clock_config.o
+                0x000000000000791c                oscConfig_BOARD_BootClockRUN
  .rodata.str1.1
-                0x0000000000007920        0x2 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg_s.a(lib_a-impure.o)
- *fill*         0x0000000000007922        0x2 
+                0x0000000000007924        0x2 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg_s.a(lib_a-impure.o)
+ *fill*         0x0000000000007926        0x2 
  .rodata._global_impure_ptr
-                0x0000000000007924        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg_s.a(lib_a-impure.o)
-                0x0000000000007924                _global_impure_ptr
+                0x0000000000007928        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg_s.a(lib_a-impure.o)
+                0x0000000000007928                _global_impure_ptr
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000000007928        0x0 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x000000000000792c        0x0 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x0000000000007928        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
-                0x0000000000007928                _init
- .init          0x000000000000792c        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+ .init          0x000000000000792c        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x000000000000792c                _init
+ .init          0x0000000000007930        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x0000000000007934        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
-                0x0000000000007934                _fini
- .fini          0x0000000000007938        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
-                0x0000000000007940                . = ALIGN (0x4)
+ .fini          0x0000000000007938        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x0000000000007938                _fini
+ .fini          0x000000000000793c        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+                0x0000000000007944                . = ALIGN (0x4)
 
-.vfp11_veneer   0x0000000000007940        0x0
+.vfp11_veneer   0x0000000000007944        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000007940        0x0
+.v4_bx          0x0000000000007944        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000007940        0x0
+.iplt           0x0000000000007944        0x0
  .iplt          0x0000000000000000        0x0 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000000007940        0x8
-                0x0000000000007940                __exidx_start = .
+.ARM            0x0000000000007944        0x8
+                0x0000000000007944                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000000007940        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
-                0x0000000000007948                __exidx_end = .
+ .ARM.exidx     0x0000000000007944        0x8 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x000000000000794c                __exidx_end = .
 
-.rel.dyn        0x0000000000007948        0x0
+.rel.dyn        0x000000000000794c        0x0
  .rel.iplt      0x0000000000000000        0x0 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
-.ctors          0x0000000000007948        0x0
-                0x0000000000007948                __CTOR_LIST__ = .
+.ctors          0x000000000000794c        0x0
+                0x000000000000794c                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0000000000007948                __CTOR_END__ = .
+                0x000000000000794c                __CTOR_END__ = .
 
-.dtors          0x0000000000007948        0x0
-                0x0000000000007948                __DTOR_LIST__ = .
+.dtors          0x000000000000794c        0x0
+                0x000000000000794c                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0000000000007948                __DTOR_END__ = .
+                0x000000000000794c                __DTOR_END__ = .
 
-.preinit_array  0x0000000000007948        0x0
-                0x0000000000007948                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000000794c        0x0
+                0x000000000000794c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000000007948                PROVIDE (__preinit_array_end, .)
+                0x000000000000794c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000000007948        0x4
-                0x0000000000007948                PROVIDE (__init_array_start, .)
+.init_array     0x000000000000794c        0x4
+                0x000000000000794c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000000007948        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
-                0x000000000000794c                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000000794c        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x0000000000007950                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000000794c        0x4
-                0x000000000000794c                PROVIDE (__fini_array_start, .)
+.fini_array     0x0000000000007950        0x4
+                0x0000000000007950                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000000794c        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
-                0x0000000000007950                PROVIDE (__fini_array_end, .)
-                0x0000000000007950                __etext = .
-                0x0000000000007950                __DATA_ROM = .
+ .fini_array    0x0000000000007950        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x0000000000007954                PROVIDE (__fini_array_end, .)
+                0x0000000000007954                __etext = .
+                0x0000000000007954                __DATA_ROM = .
 
 .interrupts_ram
                 0x000000001fff0000        0x0
@@ -8753,7 +8753,7 @@ LOAD /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.
                 0x0000000000000000                __VECTOR_RAM = DEFINED (__ram_vector_table__)?__VECTOR_RAM__:ORIGIN (m_interrupts)
                 0x0000000000000000                __RAM_VECTOR_TABLE_SIZE_BYTES = DEFINED (__ram_vector_table__)?(__interrupts_ram_end__ - __interrupts_ram_start__):0x0
 
-.data           0x000000001fff0000       0x80 load address 0x0000000000007950
+.data           0x000000001fff0000       0x80 load address 0x0000000000007954
                 0x000000001fff0000                . = ALIGN (0x4)
                 0x000000001fff0000                __DATA_RAM = .
                 0x000000001fff0000                __data_start__ = .
@@ -8783,14 +8783,14 @@ LOAD /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.
  .jcr           0x000000001fff007c        0x4 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
                 0x000000001fff0080                . = ALIGN (0x4)
                 0x000000001fff0080                __data_end__ = .
-                0x00000000000079d0                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x00000000000079d4                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
                 0x0000000000100000                text_end = (ORIGIN (m_text) + 0xffbf0)
                 0x0000000000000001                ASSERT ((__DATA_END <= text_end), region m_text overflowed with text and data)
 
-.igot.plt       0x000000001fff0080        0x0 load address 0x00000000000079d0
+.igot.plt       0x000000001fff0080        0x0 load address 0x00000000000079d4
  .igot.plt      0x0000000000000000        0x0 /Applications/KDS_v3.app/Contents/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
 
-.bss            0x000000001fff0080     0x458c load address 0x00000000000079d0
+.bss            0x000000001fff0080     0x458c load address 0x00000000000079d4
                 0x000000001fff0080                . = ALIGN (0x4)
                 0x000000001fff0080                __START_BSS = .
                 0x000000001fff0080                __bss_start__ = .
